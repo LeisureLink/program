@@ -4,6 +4,19 @@ A simplified, promise-style CLI utility for programs written in nodejs.
 
 > Initial 0.1.0 is underdocumented but functional; you'll have to dig through the tests for an accurate picture of its use.
 
+Istanbul coverage report says:
+
+```text
+=============================== Coverage summary ===============================
+Statements   : 74.19% ( 161/217 )
+Branches     : 51.14% ( 45/88 )
+Functions    : 75% ( 18/24 )
+Lines        : 74.42% ( 160/215 )
+================================================================================
+```
+
+... so there is a little ways to go yet.
+
 ## Install
 
 ```bash
