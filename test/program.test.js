@@ -111,7 +111,6 @@ test('.run(cmd) does not throw when arguement undefined but relaxed', t => {
     .spec([], true)
     .run((program, options) => {
       // arguments are camelcased when assigned to options:
-      console.dir(options);
       t.equal(options.willingAndAble, true, 'options has willingAndAble property');
       t.end();
     })
@@ -211,6 +210,25 @@ test('.run(cmd) validates when validations promised (negative)', t => {
       t.equal('' + err,
         'AssertionError: jane is unwilling',
         'AssertionError: jane is unwilling');
+      t.end();
+    });
+});
+
+test('.run() runs named command', t => {
+  Program.create(pkg, ['go', '--westward'])
+    .spec([], true)
+    .command('go', (program, options) => {
+      t.ok(program, 'dispatched command gets program');
+      t.ok(options, 'dispatched command gets options');
+      t.equal(options.westward, true, 'arguments are propagated to the named command');
+      t.end();
+    })
+    .run(() => {
+      t.fail('default command should not be called');
+      t.end();
+    })
+    .catch(err => {
+      t.fail(''+ (err.stack || err));
       t.end();
     });
 });
