@@ -1,6 +1,6 @@
 {
   "name": "@lexicontraveltech/prg",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A simplified, promise-style CLI utility for programs written in nodejs.",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,7 @@
     "ci": "npm run lint && npm test",
     "clean": "rm -rf ./coverage .coverag*",
     "preversion": "npm run test",
-    "postversion": "git push && git push --tags",
-    "lint": "eslint ."
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
