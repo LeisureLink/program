@@ -1,6 +1,6 @@
 {
   "name": "@lexicontraveltech/prg",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A simplified, promise-style CLI utility for programs written in nodejs.",
   "main": "index.js",
   "scripts": {
